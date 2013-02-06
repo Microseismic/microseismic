@@ -104,7 +104,7 @@ use ifport
         do j = 0,num_s-1
             do k = 0,num_s-1
                 !Получение координат обрабатываемой точки
-                point = -[i,j,k] * delta / (num_s - 1) + max_s    
+                point = [i,j,k] * delta / (num_s - 1) + min_s    
                 
                 !Вычисление годографа        
                 godograf = 0

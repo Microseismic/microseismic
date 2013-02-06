@@ -99,7 +99,7 @@ use ifport
     time1 = time()
     
     !Распараллеленый цикл
-    !!$OMP PARALLEL DO schedule(dynamic,1) collapse (3) private ( point, godograf, f_i, ret, intgodog, delta_godog, avret, l,m, t) NUM_THREADS(8)
+    !$OMP PARALLEL DO schedule(dynamic,1) collapse (3) private ( point, godograf, f_i, ret, intgodog, delta_godog, avret, l,m, t) NUM_THREADS(8)
     do i = 0,num_s-1
         do j = 0,num_s-1
             do k = 0,num_s-1
@@ -146,7 +146,7 @@ use ifport
             end do
         end do
     end do
-    !!$OMP END PARALLEL DO
+    !$OMP END PARALLEL DO
     !Конец параллельного цикла
 
     !Высчитываем время работы 

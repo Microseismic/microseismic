@@ -124,7 +124,7 @@ use ifport
                 intgodog = floor(godograf)
                 !Вычисление дробной части годографа
                 delta_godog = godograf - intgodog
-
+                ret = 0
                 !Выполняем суммирование
                 do t = 1,num
                     !Получение данных для когерентного суммирования                    

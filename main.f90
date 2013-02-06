@@ -74,8 +74,11 @@ use ifport
     ALLOCATE (delta_godog(num))                    
     ALLOCATE (f_i(0:height))
 
+    delta = max_s-min_s
+    num_part = height/split
     !Вывод частоты сетки
     print * ,"Delta: ",delta/(num_s-1)
+    coord_d=0
 
     !Заполнение координат сетки
     do i = 0,num_d_x-1
